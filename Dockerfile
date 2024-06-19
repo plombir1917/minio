@@ -2,4 +2,4 @@
 FROM minio/minio
 
 # Запустите MinIO сервер
-CMD ["server", "/data"]
+CMD ["server", "--address", ":9000", "--console-address", ":9001", "/data"]
