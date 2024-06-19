@@ -1,16 +1,5 @@
-services:
-  minio-api:
-    containers:
-      - name: minio-api
-        image: your-registry/minio-api:latest
-        ports:
-          - port: 9000
-            protocol: HTTP
-
-  minio-console:
-    containers:
-      - name: minio-console
-        image: your-registry/minio-console:latest
-        ports:
-          - port: 9001
-            protocol: HTTP
+name: minio-koyeb
+ports:
+  - protocol: tcp
+    internal_port: 9000
+    public_port: 8000
