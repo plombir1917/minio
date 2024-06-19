@@ -1,7 +1,7 @@
 FROM minio/minio:latest
 
-# Set the MinIO server's default listening ports
+# Открываем порты
 EXPOSE 9000 9001
 
-# Start MinIO server
+# Запуск сервера MinIO
 CMD ["server", "/data", "--console-address", ":9001"]
