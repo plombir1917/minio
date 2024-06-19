@@ -1,0 +1,7 @@
+# Dockerfile for MinIO Console
+FROM minio/console:latest
+
+# Expose port 9001 for MinIO Console
+EXPOSE 9001
+
+CMD ["server", "--address", ":9001"]
