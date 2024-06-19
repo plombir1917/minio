@@ -1,9 +1,9 @@
 upstream minio_console {
-	server ${MINIO_HOST}:${MINIO_CONSOLE_PORT};
+	server minio-8mu5.onrender.com:9001;
 }
 
 server {
-	listen ${PORT};
+	listen 9000;
 
 	# Allow special characters in headers
 	ignore_invalid_headers off;
