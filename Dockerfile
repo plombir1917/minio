@@ -1,8 +1,7 @@
-# Dockerfile
-FROM minio/minio
+FROM minio/minio:latest
 
-# Создайте точки монтирования для многодисковой конфигурации
-VOLUME /data1 /data2 /data3 /data4
+# Set the MinIO server's default listening ports
+EXPOSE 9000 9001
 
-# Запустите MinIO на порту 9000 для API и 9001 для веб-интерфейса
-CMD ["server", "--address", ":9000", "--console-address", ":9001", "/data1", "/data2", "/data3", "/data4"]
+# Start MinIO server
+CMD ["server", "/data", "--console-address", ":9001"]
