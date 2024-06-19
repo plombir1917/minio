@@ -1,6 +1,6 @@
 FROM minio/minio
 
-EXPOSE 9000
-EXPOSE 9001
+EXPOSE 80
+EXPOSE 443
 
 CMD ["server", "/data"]
