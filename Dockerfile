@@ -7,9 +7,5 @@ ENV MINIO_SECRET_KEY=mysecretkey
 # Expose port 9000 for MinIO server
 EXPOSE 9000
 
-# Download and install MinIO Console
-RUN wget https://dl.min.io/client/console/linux-amd64/minio && \
-    chmod +x minio
-
 # Start MinIO server and MinIO Console
 CMD ["server", "/data"]
