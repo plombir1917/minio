@@ -1,7 +1,9 @@
-FROM minio/minio:latest
+# Используйте официальный образ MinIO
+FROM minio/minio
 
-# Открываем порты
-EXPOSE 9000 9001
+# Установите переменные окружения для настройки MinIO (для примера, можно указать ваши значения)
+ENV MINIO_ACCESS_KEY=myaccesskey
+ENV MINIO_SECRET_KEY=mysecretkey
 
-# Запуск сервера MinIO
-CMD ["server", "/data", "--console-address", ":9001"]
+# Запустите MinIO сервер
+CMD ["server", "/data"]
